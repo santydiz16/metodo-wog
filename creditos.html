@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Créditos fotográficos · Método WOG</title>
+  <link rel="stylesheet" href="styles.css?v=20260618" />
+  <style>
+    .page-credits { padding-top: calc(var(--nav-h) + 3rem); }
+    .credits-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; transition: color 0.2s; }
+    .credits-back:hover { color: var(--gold-2); }
+    .credits-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+    .credits-list li { background: var(--bg-card); border: 1px solid var(--line); padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--cream-2); line-height: 1.6; }
+    .credits-list a { color: var(--gold); text-decoration: underline; }
+  </style>
+</head>
+<body class="page-credits">
+  <div class="container">
+    <a href="index.html" class="credits-back">← Volver al sitio</a>
+    <h1 class="section-title" style="margin-bottom:1rem">Créditos fotográficos</h1>
+    <p style="color:var(--cream-3);font-size:0.875rem">Imágenes bajo licencias Creative Commons vía <a href="https://openverse.org" target="_blank" rel="noopener" style="color:var(--gold)">Openverse</a>.</p>
+    <ul class="credits-list" data-credits></ul>
+  </div>
+  <script>
+    fetch("assets/credits.json?v=20260618").then(function(r){return r.json();}).then(function(credits){
+      var list = document.querySelector("[data-credits]");
+      if (!list || !credits) return;
+      var html = "";
+      var items = Array.isArray(credits) ? credits : Object.values(credits);
+      items.forEach(function(c){
+        html += "<li><strong>" + (c.title||"Sin título") + "</strong> por " +
+          (c.creator_url ? "<a href='"+c.creator_url+"' target='_blank' rel='noopener'>"+c.creator+"</a>" : (c.creator||"desconocido")) +
+          " (" + (c.source||"") + ") · <a href='" + (c.license_url||"#") + "' target='_blank' rel='noopener'>" + ((c.license||"").toUpperCase()) + " " + (c.license_version||"") + "</a>" +
+          (c.foreign_landing_url ? " · <a href='"+c.foreign_landing_url+"' target='_blank' rel='noopener'>Ver original ↗</a>" : "") +
+          "</li>";
+      });
+      list.innerHTML = html;
+    }).catch(function(){
+      document.querySelector("[data-credits]").innerHTML = "<li>No se encontró el archivo de créditos.</li>";
+    });
+  </script>
+</body>
+</html>

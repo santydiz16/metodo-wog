@@ -1,0 +1,86 @@
+[
+  {
+    "key": "hero",
+    "src": "assets/img/hero.webp",
+    "title": "Osaka Castle Shudokan Martial Arts Training Brake",
+    "creator": "Ivan Mlinaric",
+    "creator_url": "https://www.flickr.com/photos/22399204@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/22399204@N08/5124298699",
+    "source": "flickr"
+  },
+  {
+    "key": "boxing",
+    "src": "assets/img/boxing.webp",
+    "title": "Warriors ...",
+    "creator": "Claudio Gennari",
+    "creator_url": "https://www.flickr.com/photos/27391161@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/27391161@N07/3557886648",
+    "source": "flickr"
+  },
+  {
+    "key": "coach",
+    "src": "assets/img/coach.webp",
+    "title": "Krav Maga Stomp Kick OR Self-Defense & Fitness 7",
+    "creator": "Rosey-OR",
+    "creator_url": "https://www.flickr.com/photos/73729436@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/73729436@N08/6737286363",
+    "source": "flickr"
+  },
+  {
+    "key": "fighter",
+    "src": "assets/img/fighter.webp",
+    "title": "The Making of a Champion",
+    "creator": "Johnny Silvercloud",
+    "creator_url": "https://www.flickr.com/photos/116193477@N08",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/116193477@N08/36873732832",
+    "source": "flickr"
+  },
+  {
+    "key": "gym1",
+    "src": "assets/img/gym1.webp",
+    "title": "DSC_0162",
+    "creator": "stoermchen",
+    "creator_url": "https://www.flickr.com/photos/49962213@N04",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/49962213@N04/9119464732",
+    "source": "flickr"
+  },
+  {
+    "key": "gym2",
+    "src": "assets/img/gym2.webp",
+    "title": "Kaiserslautern High School",
+    "creator": "USACE Europe District",
+    "creator_url": "https://www.flickr.com/photos/34728058@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/34728058@N08/30469272151",
+    "source": "flickr"
+  },
+  {
+    "key": "ring",
+    "src": "assets/img/ring.webp",
+    "title": "Warriors ...",
+    "creator": "Claudio Gennari",
+    "creator_url": "https://www.flickr.com/photos/27391161@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/27391161@N07/3557886648",
+    "source": "flickr"
+  }
+]
