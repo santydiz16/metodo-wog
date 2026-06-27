@@ -278,6 +278,11 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   color: var(--gold);
   line-height: 1;
 }
+.nav-logo {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
 .nav-links {
   display: none;
   margin-left: auto;
