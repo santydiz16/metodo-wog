@@ -1575,3 +1575,132 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
     bottom: calc(4.5rem + env(safe-area-inset-bottom));
   }
 }
+
+/* ═══════════════════════════════════
+   RUTINAS
+═══════════════════════════════════ */
+.s-rutinas { background: var(--bg-2); }
+
+.rutinas-sub {
+  font-size: clamp(.95rem, 2.5vw, 1.1rem);
+  color: var(--cream-2);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-top: .75rem;
+}
+
+.rutinas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-block: 2.5rem 1.5rem;
+}
+@media (min-width: 900px) {
+  .rutinas-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+.rutina-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color .25s var(--ease-out), transform .25s var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .rutina-card:hover { border-color: var(--line-gold); transform: translateY(-4px); }
+}
+.rutina-card--destacada {
+  border-color: var(--gold);
+  border-width: 2px;
+  box-shadow: 0 8px 32px rgba(201,168,76,.12);
+  position: relative;
+}
+.rutina-card--destacada::before {
+  content: 'Más popular';
+  position: absolute;
+  top: -1px; right: 1.5rem;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: var(--ff-display);
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.rutina-num {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  color: var(--gold);
+  opacity: .25;
+  line-height: 1;
+}
+
+.rutina-tag {
+  font-size: .65rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.rutina-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.35rem, 3vw, 1.625rem);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1.1;
+  letter-spacing: .02em;
+}
+.rutina-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.rutina-desc {
+  font-size: .875rem;
+  color: var(--cream-2);
+  line-height: 1.65;
+}
+
+.rutina-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: .25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  flex: 1;
+}
+.rutina-features li {
+  font-size: .85rem;
+  color: var(--cream-2);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.45;
+}
+.rutina-features li::before {
+  content: '✓';
+  position: absolute; left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+.rutina-card--destacada .rutina-features li { color: var(--cream); }
+
+.rutinas-cta-nota {
+  text-align: center;
+  font-size: .9rem;
+  color: var(--cream-3);
+  margin-top: 1rem;
+}
+.rutinas-cta-nota a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+.rutinas-cta-nota a:hover { text-decoration: underline; }
