@@ -991,8 +991,8 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   gap: 1.25rem;
   margin-top: 2.5rem;
 }
-@media (min-width: 640px)  { .testimonios-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 640px)  { .testimonios-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+@media (min-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
 
 .testi {
   background: var(--bg-card);
