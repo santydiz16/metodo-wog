@@ -407,7 +407,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 }
 .hero-bg img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center 15%;
+  object-fit: cover; object-position: center 40%;
 }
 .hero-tint {
   position: absolute; inset: 0;
