@@ -796,14 +796,15 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 /* Quote text */
 .voz-text {
   font-size: clamp(1.05rem, 3vw, 1.25rem);
-  font-style: italic;
-  color: var(--cream);
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
   line-height: 1.5;
   flex: 1;
   margin-bottom: 1.25rem;
 }
 .voz-text em {
-  font-style: normal;
+  font-style: italic;
   color: var(--gold);
   font-family: var(--ff-display);
   font-size: 1.1em;
@@ -997,8 +998,8 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 1.5rem;
-  display: flex; flex-direction: column; gap: 1rem;
+  padding: 0;
+  display: flex; flex-direction: column;
   position: relative;
   overflow: hidden;
   transition: transform .25s var(--ease-out), border-color .25s var(--ease-out);
@@ -1008,7 +1009,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   position: absolute; inset: 0; opacity: 0;
   background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--gold-glow), transparent 70%);
   transition: opacity .35s var(--ease-out);
-  pointer-events: none;
+  pointer-events: none; z-index: 1;
 }
 @media (hover: hover) and (pointer: fine) {
   .testi:hover { transform: translateY(-4px); border-color: var(--line-gold); }
@@ -1016,8 +1017,33 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 }
 .testi:active { transform: scale(.98); }
 
+/* foto de transformación */
+.testi-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* contenido debajo de la foto */
+.testi-body {
+  display: flex; flex-direction: column; gap: .875rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  flex: 1;
+}
+
 .testi-head {
-  display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+}
+.testi-head-info { display: flex; flex-direction: column; gap: .2rem; flex: 1; }
+.testi-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--line-gold);
+  flex-shrink: 0;
 }
 .testi-nombre {
   font-family: var(--ff-display);
