@@ -420,15 +420,15 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 }
 @media (min-width: 768px) {
   .hero-bg {
-    left: 42%;
+    left: 48%;
   }
   .hero-tint {
     background: linear-gradient(
       to right,
       rgba(10,8,4,1)   0%,
-      rgba(10,8,4,.85) 40%,
-      rgba(10,8,4,.4)  70%,
-      rgba(10,8,4,.55) 100%
+      rgba(10,8,4,.7)  35%,
+      rgba(10,8,4,.25) 65%,
+      rgba(10,8,4,.4)  100%
     );
   }
 }
