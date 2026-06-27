@@ -991,8 +991,8 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   gap: 1.25rem;
   margin-top: 2.5rem;
 }
-@media (min-width: 640px)  { .testimonios-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
-@media (min-width: 1024px) { .testimonios-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+@media (min-width: 900px)  { .testimonios-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+@media (min-width: 1200px) { .testimonios-grid { gap: 2rem; } }
 
 .testi {
   background: var(--bg-card);
@@ -1079,7 +1079,9 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   gap: .875rem;
   font-size: .82rem;
   line-height: 1.45;
+  overflow: hidden;
 }
+.ad-col { min-width: 0; overflow: hidden; }
 .ad-label {
   font-size: .62rem;
   letter-spacing: .15em;
@@ -1123,7 +1125,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   gap: 1.25rem;
   margin-block: 2rem 1.5rem;
 }
-@media (min-width: 520px) { .planes-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+@media (min-width: 768px) { .planes-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
 
 .plan {
   background: var(--bg-card);
@@ -1220,6 +1222,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   max-width: 680px;
   margin-inline: auto;
   text-align: center;
+  overflow: hidden;
 }
 .cta-title {
   font-family: var(--ff-display);
@@ -1242,7 +1245,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   margin-bottom: 1.25rem;
 }
 @media (min-width: 480px) {
-  .cta-btns { flex-direction: row; justify-content: center; }
+  .cta-btns { flex-direction: row; justify-content: center; flex-wrap: wrap; }
 }
 @media (max-width: 479px) {
   .cta-btns .btn { width: 100%; max-width: 340px; }
@@ -1352,6 +1355,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   gap: 1.5rem;
   margin-block: 2.5rem 2rem;
   counter-reset: paso;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .pasos-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
@@ -1363,6 +1367,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   border-radius: var(--r);
   padding: 1.75rem 1.5rem;
   position: relative;
+  overflow: hidden;
   transition: border-color .25s var(--ease-out), transform .25s var(--ease-out);
 }
 @media (min-width: 768px) {
