@@ -426,9 +426,9 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
     background: linear-gradient(
       to right,
       rgba(10,8,4,1)   0%,
-      rgba(10,8,4,.7)  35%,
-      rgba(10,8,4,.25) 65%,
-      rgba(10,8,4,.4)  100%
+      rgba(10,8,4,.8)  35%,
+      rgba(10,8,4,.6)  65%,
+      rgba(10,8,4,.7)  100%
     );
   }
 }
