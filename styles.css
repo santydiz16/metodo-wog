@@ -413,9 +413,9 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   position: absolute; inset: 0;
   background: linear-gradient(
     150deg,
-    rgba(10,8,4,.9)  0%,
-    rgba(10,8,4,.72) 55%,
-    rgba(10,8,4,.88) 100%
+    rgba(10,8,4,.75) 0%,
+    rgba(10,8,4,.5)  55%,
+    rgba(10,8,4,.65) 100%
   );
 }
 @media (min-width: 768px) {
