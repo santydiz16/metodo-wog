@@ -872,7 +872,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   padding: 1.5rem;
   border-radius: 0 0 var(--r) var(--r);
   display: flex; gap: 1.25rem; align-items: flex-start;
-  transition: border-top-color .25s var(--ease-out), transform .25s var(--ease-out);
+  transition: border-top-color .2s var(--ease-out), transform .18s var(--ease-spring);
   flex: 1;
 }
 @media (min-width: 768px) {
