@@ -190,7 +190,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { transition: none; }
+  .reveal { transition: none; opacity: 1; transform: none; }
   .hero-kicker, .hero-title, .hero-sub, .hero-quote,
   .hero-actions, .hero-stats {
     animation: none;
@@ -310,6 +310,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 }
 .nav-link:hover { color: var(--cream); }
 .nav-link:hover::after { right: 0; }
+.nav-link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
 .nav-cta {
   display: none;
@@ -1313,6 +1314,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   transition: color .2s;
 }
 .footer-nav a:hover { color: var(--gold); }
+.footer-nav a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
 .footer-social { display: flex; gap: .75rem; }
 .footer-social a {
@@ -1336,6 +1338,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   transition: color .2s;
 }
 .footer-credits:hover { color: var(--gold); }
+.footer-credits:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
 /* ═══════════════════════════════════
    PLAN FEATURES
@@ -1471,6 +1474,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
 @media (hover: hover) and (pointer: fine) {
   .faq-q:hover { background: var(--bg-card-2); }
 }
+.faq-q:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; background: var(--bg-card-2); }
 
 .faq-icon {
   width: 36px; height: 36px;
@@ -1723,3 +1727,4 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   font-weight: 600;
 }
 .rutinas-cta-nota a:hover { text-decoration: underline; }
+.rutinas-cta-nota a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
