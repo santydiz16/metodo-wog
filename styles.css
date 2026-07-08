@@ -1526,7 +1526,7 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   margin-top: 2.5rem;
 }
 @media (min-width: 768px) {
-  .faq-grid { grid-template-columns: 1fr 1fr; gap: .875rem; }
+  .faq-grid { grid-template-columns: 1fr 1fr; gap: .875rem; align-items: start; }
 }
 
 .faq-item {
