@@ -1151,50 +1151,88 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 2rem 1.75rem;
+  padding: 2.25rem 2rem 2rem;
   text-align: left;
   display: flex; flex-direction: column; gap: 0;
   position: relative;
+  overflow: hidden;
   transition: transform .18s var(--ease-spring), border-color .2s var(--ease-out),
               box-shadow .2s var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
-  .plan:hover { transform: translateY(-6px); border-color: var(--line-gold);
-    box-shadow: 0 20px 48px rgba(0,0,0,.5); }
+  .plan:hover { transform: translateY(-5px);
+    box-shadow: 0 24px 52px rgba(0,0,0,.55); }
+  .plan:hover .plan-stripe { opacity: 1; }
 }
 .plan:active { transform: scale(.98); }
 
+/* Franja decorativa superior */
+.plan-stripe {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--line);
+  opacity: .6;
+  transition: opacity .2s var(--ease-out);
+}
+.plan-stripe--gold {
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-hi) 100%);
+  opacity: 1;
+}
+
+/* Número decorativo de fondo */
+.plan-num {
+  position: absolute;
+  top: 2.25rem; right: 1rem;
+  font-family: var(--ff-display);
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: 1;
+  color: rgba(255,255,255,.03);
+  pointer-events: none;
+  user-select: none;
+}
+.plan-num--gold { color: rgba(201,168,76,.07); }
+
 .plan--destacado {
-  border-color: var(--gold);
-  border-width: 2px;
-  background: linear-gradient(160deg, var(--bg-card) 0%, rgba(201,168,76,.08) 100%);
-  box-shadow: 0 8px 32px rgba(201,168,76,.12);
+  border-color: rgba(201,168,76,.45);
+  border-width: 1px;
+  background: linear-gradient(155deg, rgba(201,168,76,.06) 0%, var(--bg-card) 50%);
+  box-shadow: 0 0 0 1px rgba(201,168,76,.15), 0 8px 40px rgba(201,168,76,.1);
 }
 @media (hover: hover) and (pointer: fine) {
-  .plan--destacado:hover { border-color: var(--gold-hi); }
+  .plan--destacado:hover {
+    box-shadow: 0 0 0 1px rgba(201,168,76,.3), 0 28px 60px rgba(201,168,76,.18);
+  }
 }
 
 .plan-badge {
-  position: absolute; top: -1px; right: 1.5rem;
+  position: absolute; top: 0; right: 1.5rem;
   background: var(--gold);
   color: #0a0804;
-  font-size: .6rem;
+  font-size: .58rem;
   font-weight: 800;
-  letter-spacing: .14em;
+  letter-spacing: .15em;
   text-transform: uppercase;
   padding: .3rem 1rem;
   white-space: nowrap;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 8px 8px;
 }
 
+/* Cabecera del plan */
 .plan-head {
   padding-bottom: 1.25rem;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--line);
 }
+.plan-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .875rem;
+}
 .plan-dur-pill {
   display: inline-block;
-  font-size: .65rem;
+  font-size: .62rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -1202,28 +1240,41 @@ button { background: none; border: none; font: inherit; cursor: pointer; }
   border: 1px solid var(--line);
   border-radius: 99px;
   padding: .25rem .875rem;
-  margin-bottom: .875rem;
 }
 .plan-dur-pill--gold {
   color: var(--gold);
-  border-color: var(--line-gold);
+  border-color: rgba(201,168,76,.35);
   background: rgba(201,168,76,.07);
 }
+/* Indicador de nivel (dots) */
+.plan-nivel {
+  display: flex; gap: .3rem; align-items: center;
+}
+.plan-nivel-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background .2s;
+}
+.plan-nivel-dot--on { background: var(--cream-3); }
+.plan-nivel-dot--gold { background: var(--gold); }
+
 .plan-nombre {
   font-family: var(--ff-display);
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: var(--cream);
-  letter-spacing: .06em;
+  letter-spacing: .05em;
   line-height: 1;
   margin-bottom: .5rem;
 }
 .plan--destacado .plan-nombre { color: var(--gold-hi); }
 .plan-tagline {
-  font-size: .85rem;
+  font-size: .825rem;
   color: var(--cream-3);
-  line-height: 1.5;
+  line-height: 1.55;
 }
+.plan--destacado .plan-tagline { color: var(--cream-2); }
 .plan-btn { width: 100%; margin-top: 1.75rem; }
 
 .garantia {
