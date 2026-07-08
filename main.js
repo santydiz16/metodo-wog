@@ -38,29 +38,48 @@
 
     // burger toggle
     if (burger && links) {
+      var scrollY = 0;
+
+      function openNav() {
+        scrollY = window.scrollY;
+        burger.classList.add("is-open");
+        links.classList.add("is-open");
+        burger.setAttribute("aria-expanded", "true");
+        // body lock — fixes position:fixed in WebViews (WhatsApp, Instagram)
+        document.body.style.position = "fixed";
+        document.body.style.top = "-" + scrollY + "px";
+        document.body.style.left = "0";
+        document.body.style.right = "0";
+        document.body.style.overflow = "hidden";
+        links.querySelector("a").focus();
+      }
+
+      function closeNav() {
+        burger.classList.remove("is-open");
+        links.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+        // restore scroll position
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.left = "";
+        document.body.style.right = "";
+        document.body.style.overflow = "";
+        window.scrollTo(0, scrollY);
+      }
+
       burger.addEventListener("click", function () {
-        var open = burger.classList.toggle("is-open");
-        links.classList.toggle("is-open", open);
-        burger.setAttribute("aria-expanded", String(open));
-        // trap focus within overlay when open
-        if (open) links.querySelector("a").focus();
+        links.classList.contains("is-open") ? closeNav() : openNav();
       });
 
       // close on link click
       links.querySelectorAll(".nav-link").forEach(function (a) {
-        a.addEventListener("click", function () {
-          burger.classList.remove("is-open");
-          links.classList.remove("is-open");
-          burger.setAttribute("aria-expanded", "false");
-        });
+        a.addEventListener("click", function () { closeNav(); });
       });
 
       // close on Escape
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && links.classList.contains("is-open")) {
-          burger.classList.remove("is-open");
-          links.classList.remove("is-open");
-          burger.setAttribute("aria-expanded", "false");
+          closeNav();
           burger.focus();
         }
       });
